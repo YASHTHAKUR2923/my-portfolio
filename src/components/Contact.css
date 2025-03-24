@@ -1,0 +1,96 @@
+/* Contact.css */
+
+/* Entire Contact Section (light gradient) */
+.contact-section {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(to right, #ffffff, #f5f7fa);
+    padding: 60px 20px;
+    line-height: 1.8; /* Preserves your preferred line-height */
+  }
+  
+  /* Section Heading */
+  .contact-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  /* Accent underline for heading */
+  .contact-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fc466b; /* Pink accent line */
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+  }
+  
+  /* (Optional) Intro text under heading 
+     If you have a paragraph to introduce the contact section 
+     .contact-intro {
+       max-width: 700px;
+       margin: 0 auto 2rem;
+       color: #444;
+       font-size: 1.1rem;
+     }
+  */
+  
+  /* Container for the contact details */
+  .contact-details {
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: left;
+    background: #fff;       /* Optional card-like background */
+    padding: 1.5rem;        /* Card padding */
+    border-radius: 8px;     /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* Soft card shadow */
+  }
+  
+  /* Each line of contact info */
+  .contact-details p {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Icon styling */
+  .contact-details i {
+    color: #4a00e0;        /* Primary icon color */
+    font-size: 1.2rem;
+    margin-right: 5px;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  /* Link color */
+  .contact-details a {
+    color: #4a00e0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effects: links & icons */
+  .contact-details a:hover {
+    color: #c33764;        /* Changes color to pinkish/purple */
+  }
+  
+  .contact-details p:hover i {
+    transform: scale(1.2);
+    color: #c33764;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .contact-details {
+      padding: 1rem;
+    }
+  }
+  

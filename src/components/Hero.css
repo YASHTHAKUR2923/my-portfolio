@@ -1,0 +1,94 @@
+/* Hero.css */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    text-align: center;
+    overflow: hidden; /* for floating shapes */
+    position: relative;
+    background: linear-gradient(to bottom right, #c33764, #1d2671);
+    color: #fff;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    z-index: 2; /* above the shapes */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h1 span {
+    color: #fffd77;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  /* Floating shapes in the background */
+  .floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .shape {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-40px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+  
+  /* Just position shapes randomly */
+  .shape1 {
+    top: 20%;
+    left: 10%;
+  }
+  .shape2 {
+    top: 60%;
+    left: 70%;
+    width: 100px;
+    height: 100px;
+  }
+  .shape3 {
+    top: 40%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+  

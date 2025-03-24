@@ -1,0 +1,90 @@
+/* About.css */
+
+/* Entire About Section (light gradient background) */
+.about-section {
+    position: relative;
+    background: linear-gradient(to right, #ffffff, #f5f7fa);
+    padding: 60px 20px;
+    text-align: center; /* Centers the section heading as well as about-content if needed */
+  }
+  
+  /* Section Heading */
+  .about-section h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  /* Accent line beneath heading */
+  .about-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fc466b; /* Pink accent line */
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+  }
+  
+  /* The "card" container for About text */
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: center; /* Ensures paragraphs are centered */
+  }
+  
+  /* Subtle gradient corner accent */
+  .about-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #fc466b, #3f5efb);
+    border-bottom-left-radius: 80px;
+    opacity: 0.1; 
+  }
+  
+  /* Paragraph spacing, now centered */
+  .about-content p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Highlight <em> or <strong> text */
+  .about-content em {
+    color: #fc466b;
+    font-style: italic;
+  }
+  .about-content strong {
+    color: #3f5efb;
+    font-weight: 600;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 40px 20px;
+    }
+    .about-section h2 {
+      font-size: 1.6rem;
+    }
+    .about-content {
+      padding: 1.5rem;
+    }
+  }
+  
