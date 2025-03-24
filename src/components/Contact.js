@@ -63,7 +63,7 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            @yash
+            @yashthakur2923
           </a>
         </p>
       </div>
