@@ -59,7 +59,7 @@ function Contact() {
           <i className="fab fa-twitter"></i>
           <strong>Twitter:</strong>{' '}
           <a
-            href="https://x.com/yash"
+            href="https://x.com/yashthakur2923"
             target="_blank"
             rel="noreferrer"
           >
