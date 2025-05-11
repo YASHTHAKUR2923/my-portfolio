@@ -1,94 +1,182 @@
-/* Hero.css */
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
-    text-align: center;
-    overflow: hidden; /* for floating shapes */
-    position: relative;
-    background: linear-gradient(to bottom right, #c33764, #1d2671);
-    color: #fff;
-    padding: 0 20px;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 2rem;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-heading span {
+  color: #00ffc3;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #ccc;
+}
+
+.hero-subtitle strong {
+  color: #fff;
+}
+
+.hero-subtitle em {
+  font-style: normal;
+  color: #00ffc3;
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.btn {
+  margin-top: 2rem;
+  background: #00ffc3;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffc3;
+}
+
+/* ----------------------------------
+   🔥 Animation Classes 
+----------------------------------- */
+.animate-fade-slide {
+  animation: fadeSlide 1.2s ease-out both;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  .hero-content {
-    max-width: 800px;
-    z-index: 2; /* above the shapes */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+}
+
+.animate-glow {
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
   }
-  
-  .hero-content h1 span {
-    color: #fffd77;
+  to {
+    text-shadow: 0 0 20px #00ffc3, 0 0 40px #00ffc3;
   }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+}
+
+.animate-pop {
+  animation: popUp 0.8s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes popUp {
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  /* Floating shapes in the background */
-  .floating-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00ffc3;
+  width: 0;
+  animation: typing 4s steps(80, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ffc3; }
+}
+
+/* ----------------------------------
+   🌀 Floating shapes 
+----------------------------------- */
+.floating-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: floatShape 10s infinite ease-in-out alternate;
+}
+
+.shape1 {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 60px;
+  height: 60px;
+  background: #00ffc3;
+  top: 70%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.shape3 {
+  width: 100px;
+  height: 100px;
+  background: #ff6e9e;
+  top: 30%;
+  left: 85%;
+  animation-delay: 4s;
+}
+
+.shape4 {
+  width: 50px;
+  height: 50px;
+  background: #00ffc3;
+  top: 85%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes floatShape {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
   }
-  
-  .shape {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    animation: float 6s ease-in-out infinite;
+  50% {
+    transform: translateY(-20px) translateX(10px) rotate(20deg);
   }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0) rotate(0deg);
-    }
-    50% {
-      transform: translateY(-40px) rotate(180deg);
-    }
-    100% {
-      transform: translateY(0) rotate(360deg);
-    }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
   }
-  
-  /* Just position shapes randomly */
-  .shape1 {
-    top: 20%;
-    left: 10%;
-  }
-  .shape2 {
-    top: 60%;
-    left: 70%;
-    width: 100px;
-    height: 100px;
-  }
-  .shape3 {
-    top: 40%;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-  }
-  
+}

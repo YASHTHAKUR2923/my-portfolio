@@ -15,11 +15,12 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">
-        <a href="#home" onClick={closeMenu}>
-          My<span className="highlight">Portfolio</span>
-        </a>
-      </div>
+   <div className="navbar-brand">
+  <a href="#home" onClick={closeMenu}>
+    My<span className="highlight">Portfolio</span>
+  </a>
+</div>
+
 
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <a href="#home" onClick={closeMenu}>Home</a>
